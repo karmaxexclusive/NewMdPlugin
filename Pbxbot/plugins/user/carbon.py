@@ -3,7 +3,7 @@ import os
 
 from pyrogram.types import Message
 
-from PbxPbxbot.functions.driver import Driver
+from Pbxbot.functions.driver import Driver
 
 from . import HelpMenu, Pbxbot, on_message
 
