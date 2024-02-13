@@ -60,6 +60,7 @@ async def ping(client: Client, message: Message):
     speed = end_time - start_time
     caption = await ping_template(round(speed, 3), uptime, client.me.mention)
     if img:
+        PIC = "https://telegra.ph/file/14166208a7bf871cb0aca.jpg"
         img = random.choice(img.split(" "))
         if img.endswith(".mp4"):
             await message.reply_video(
