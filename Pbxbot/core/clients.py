@@ -110,7 +110,7 @@ class PbxClient(Client):
     async def start_message(self, version: dict) -> None:
         await self.bot.send_animation(
                         Config.LOGGER_ID,
-            "https://telegra.ph/file/a70e1173266d4023d969a.mp4",
+            "https://telegra.ph/file/87ac234a193f8353e64d6.jpg",
             f"**{Symbols.check_mark} ᴘʙx 2.0 ɪs.ɴᴏᴡ ᴏɴʟɪɴᴇ!**\n\n"
             f"**{Symbols.triangle_right}  ᴄʟɪᴇɴᴛs ➠ ** `{len(self.users)}`\n"
             f"**{Symbols.triangle_right} ᴘʟᴜɢɪɴs ➠ ** `{len(Config.CMD_MENU)}`\n"
