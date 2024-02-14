@@ -30,7 +30,7 @@ PING_TEMPLATES = [
 │•**𝐎ᴡɴᴇʀ ➠** {owner} 
 ╰✠╼━━━━━━❖━━━━━━━✠╯
         ╔═════════════╗
-          <b><i>✬  <a href='https://t.me/ll_THE_BAD_BOT_ll'> 🇨🇦  𝗣𝗕𝗫  🌸 </a>  ✬</i></b>
+            <b><i>✬  <a href='https://t.me/ll_THE_BAD_BOT_ll'> 🇨🇦  𝗣𝗕𝗫  🌸 </a>  ✬</i></b>
         ╚═════════════╝
 ❍════════════════════❍""",
 ]
