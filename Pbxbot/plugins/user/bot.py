@@ -53,7 +53,7 @@ async def alive(client: Client, message: Message):
 @on_message("ping", allow_stan=True)
 async def ping(client: Client, message: Message):
     start_time = time.time()
-    Pbx = await Pbxbot.edit(message, "**Pong ~**")
+    Pbx = await Pbxbot.edit(message, "`·.·★ ᴘʙx 2.0 ★·.·´")
     uptime = readable_time(time.time() - START_TIME)
     img = await db.get_env(ENV.ping_pic)
     end_time = time.time()
