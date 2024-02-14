@@ -111,15 +111,15 @@ class PbxClient(Client):
         await self.bot.send_animation(
                         Config.LOGGER_ID,
             "https://telegra.ph/file/a70e1173266d4023d969a.mp4",
-            f"**{Symbols.check_mark} PBX 2.0  𝗂𝗌 𝗇𝗈𝗐 𝖮𝗇𝗅𝗂𝗇𝖾!**\n\n"
-            f"**{Symbols.triangle_right} 𝖢𝗅𝗂𝖾𝗇𝗍𝗌:** `{len(self.users)}`\n"
-            f"**{Symbols.triangle_right} 𝖯𝗅𝗎𝗀𝗂𝗇𝗌:** `{len(Config.CMD_MENU)}`\n"
-            f"**{Symbols.triangle_right} 𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌:** `{len(Config.CMD_INFO)}`\n"
-            f"**{Symbols.triangle_right} 𝖲𝗍𝖺𝗇 𝖴𝗌𝖾𝗋𝗌:** `{len(Config.STAN_USERS)}`\n"
-            f"**{Symbols.triangle_right} 𝖠𝗎𝗍𝗁 𝖴𝗌𝖾𝗋𝗌:** `{len(Config.AUTH_USERS)}`\n\n"
-            f"**{Symbols.triangle_right} PBX 2.0 𝖵𝖾𝗋𝗌𝗂𝗈𝗇:** `{version['Pbxbot']}`\n"
-            f"**{Symbols.triangle_right} 𝖯𝗒𝗋𝗈𝗀𝗋𝖺𝗆 𝖵𝖾𝗋𝗌𝗂𝗈𝗇:** `{version['pyrogram']}`\n"
-            f"**{Symbols.triangle_right} 𝖯𝗒𝗍𝗁𝗈𝗇 𝖵𝖾𝗋𝗌𝗂𝗈𝗇:** `{version['python']}`\n\n"
+            f"**{Symbols.check_mark} ᴘʙx 2.0 ɪs.ɴᴏᴡ ᴏɴʟɪɴᴇ!**\n\n"
+            f"**{Symbols.triangle_right}  ᴄʟɪᴇɴᴛs:** `{len(self.users)}`\n"
+            f"**{Symbols.triangle_right} ᴘʟᴜɢɪɴs:** `{len(Config.CMD_MENU)}`\n"
+            f"**{Symbols.triangle_right} ᴄᴏᴍᴍᴀɴᴅs:** `{len(Config.CMD_INFO)}`\n"
+            f"**{Symbols.triangle_right} sᴛᴀɴ ᴜsᴇʀs:** `{len(Config.STAN_USERS)}`\n"
+            f"**{Symbols.triangle_right} ᴀᴜᴛʜ ᴜsᴇʀs:** `{len(Config.AUTH_USERS)}`\n\n"
+            f"**{Symbols.triangle_right} ᴘʙx 2.0 ᴠᴇʀsɪᴏɴ** `{version['Pbxbot']}`\n"
+            f"**{Symbols.triangle_right}  ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ** `{version['pyrogram']}`\n"
+            f"**{Symbols.triangle_right}  ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** `{version['python']}`\n\n"
             f"**</> @ll_THE_BAD_BOT_ll**",
             parse_mode=ParseMode.MARKDOWN,
             disable_notification=True,
