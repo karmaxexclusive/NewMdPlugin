@@ -16,7 +16,7 @@ from . import Config, HelpMenu, db, Pbxbot, on_message
 
 @on_message("alive", allow_stan=True)
 async def alive(client: Client, message: Message):
-    Pbx = await Pbxbot.edit(message, "Processing ...")
+    Pbx = await Pbxbot.edit(message, "ʀᴜᴋᴏ ʙᴀʙʏ ☹️✨❤️")
 
     img = await db.get_env(ENV.alive_pic)
     if not img:
