@@ -6,7 +6,7 @@ from Pbxbot import SUDO_USER
 
 ACTIVATE_RLIST = []
 
-@on_message(filters.command(["rr", "replyraid", "raidreply"], ".") & (filters.me | filters.user(SUDO_USER)))
+@Pbx_message(filters.command(["rr", "replyraid", "raidreply"], ".") & (filters.me | filters.user(SUDO_USER)))
 async def rr(client: Client, message: Message):
     r = await message.edit_text("**Processing**")
     reply = message.reply_to_message
@@ -33,7 +33,7 @@ async def rr(client: Client, message: Message):
     ACTIVATE_RLIST.append(user.id)
     await r.edit(f"**Replyraid Activated On {user.first_name} Successfully ✅**")
 
-@on_message(filters.command(["drr", "dreplyraid", "draidreply"], ".") & (filters.me | filters.user(SUDO_USER)))
+@Pbx_message(filters.command(["drr", "dreplyraid", "draidreply"], ".") & (filters.me | filters.user(SUDO_USER)))
 async def drr(client: Client, message: Message):
     r = await message.edit_text("**Processing**")
     reply = message.reply_to_message
@@ -52,7 +52,7 @@ async def drr(client: Client, message: Message):
     await r.edit(f"**Reply Raid has Been Removed {user.first_name}, enjoy!**")
 
 
-@on_message(filters.incoming)
+@Pbx_message(filters.incoming)
 async def watch_raids(client: Client, message: Message):
     try:
         if not message:
