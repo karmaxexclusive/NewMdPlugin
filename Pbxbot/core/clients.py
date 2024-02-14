@@ -112,14 +112,14 @@ class PbxClient(Client):
                         Config.LOGGER_ID,
             "https://telegra.ph/file/a70e1173266d4023d969a.mp4",
             f"**{Symbols.check_mark} ᴘʙx 2.0 ɪs.ɴᴏᴡ ᴏɴʟɪɴᴇ!**\n\n"
-            f"**{Symbols.triangle_right}  ᴄʟɪᴇɴᴛs:** `{len(self.users)}`\n"
-            f"**{Symbols.triangle_right} ᴘʟᴜɢɪɴs:** `{len(Config.CMD_MENU)}`\n"
-            f"**{Symbols.triangle_right} ᴄᴏᴍᴍᴀɴᴅs:** `{len(Config.CMD_INFO)}`\n"
-            f"**{Symbols.triangle_right} sᴛᴀɴ ᴜsᴇʀs:** `{len(Config.STAN_USERS)}`\n"
-            f"**{Symbols.triangle_right} ᴀᴜᴛʜ ᴜsᴇʀs:** `{len(Config.AUTH_USERS)}`\n\n"
-            f"**{Symbols.triangle_right} ᴘʙx 2.0 ᴠᴇʀsɪᴏɴ** `{version['Pbxbot']}`\n"
-            f"**{Symbols.triangle_right}  ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ** `{version['pyrogram']}`\n"
-            f"**{Symbols.triangle_right}  ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ:** `{version['python']}`\n\n"
+            f"**{Symbols.triangle_right}  ᴄʟɪᴇɴᴛs ➠ ** `{len(self.users)}`\n"
+            f"**{Symbols.triangle_right} ᴘʟᴜɢɪɴs ➠ ** `{len(Config.CMD_MENU)}`\n"
+            f"**{Symbols.triangle_right} ᴄᴏᴍᴍᴀɴᴅs ➠ ** `{len(Config.CMD_INFO)}`\n"
+            f"**{Symbols.triangle_right} sᴛᴀɴ ᴜsᴇʀs ➠ ** `{len(Config.STAN_USERS)}`\n"
+            f"**{Symbols.triangle_right} ᴀᴜᴛʜ ᴜsᴇʀs ➠ ** `{len(Config.AUTH_USERS)}`\n\n"
+            f"**{Symbols.triangle_right} ᴘʙx 2.0 ᴠᴇʀsɪᴏɴ ➠ ** `{version['Pbxbot']}`\n"
+            f"**{Symbols.triangle_right}  ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ ➠ ** `{version['pyrogram']}`\n"
+            f"**{Symbols.triangle_right}  ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➠ ** `{version['python']}`\n\n"
             f"**</> @ll_THE_BAD_BOT_ll**",
             parse_mode=ParseMode.MARKDOWN,
             disable_notification=True,
@@ -134,9 +134,6 @@ class PbxClient(Client):
                     ],
                     [
                     InlineKeyboardButton("🦋 𝐏ʙx 𝐁ᴏᴛ 𝐒ᴜᴘᴘᴏʀᴛ ❤️", url="https://t.me/ll_THE_BAD_BOT_ll"),
-                    ],
-                    [
-                    InlineKeyboardButton("🦋 𝐏ʙx 𝐁ᴏᴛ 𝐍ᴇᴛᴡᴏʀᴋ ❤️", url="https://t.me/PBX_NETWORK"),
                     ],
                 ]
             ),
