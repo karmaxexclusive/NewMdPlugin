@@ -2,7 +2,7 @@ from random import choice
 from pyrogram import filters, Client
 from pyrogram.types import Message
 from Pbxbot.core.data import RAID, VERIFIED_USERS, GROUP
-from Pbxbot.core.config.py.import SUDO_USER
+from Pbxbot.core.config.py import SUDO_USER
 
 ACTIVATE_RLIST = []
 
