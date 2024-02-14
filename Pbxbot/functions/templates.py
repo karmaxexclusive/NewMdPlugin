@@ -2,6 +2,7 @@ import random
 
 from Pbxbot import __version__
 from Pbxbot.core import ENV, db
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 ALIVE_TEMPLATES = [
     (
@@ -20,6 +21,20 @@ ALIVE_TEMPLATES = [
 "❍═════════════════════════❍\n"
         ),
 ]
+parse_mode=ParseMode.MARKDOWN,
+            disable_notification=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("💫 Start Me", url=f"https://t.me/{self.bot.me.username}?start=start"),
+                        InlineKeyboardButton("💖 Repo", url="https://github.com/The-HellBot/HellBot"),
+                    ],
+                    [
+                        InlineKeyboardButton("🍀 HellBot Networks 🍀", url="https://t.me/hellbot_networks"),
+                    ],
+                ]
+            ),
+)
 
 PING_TEMPLATES = [
     """ﾠ╰•★★ 💫 🅿🅱🆇 2.0 💫 ★★•╯
