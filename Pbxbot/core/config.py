@@ -1,15 +1,4 @@
 from os import getenv
-from os import getenv
-
-#dont change file 
-API_ID = int(getenv("API_ID", "29908998"))
-API_HASH = getenv("API_HASH", "")
-BOT_TOKEN = getenv("BOT_TOKEN", "")
-OWNER_ID = int(getenv("OWNER_ID", ""))
-STRING_SESSION = getenv("STRING_SESSION", "")
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "6898413162").split()))
-REPO_URL = getenv("REPO_URL", "https://github.com/badmunda98/PBXPLUGINS_2.0")
-BRANCH = getenv("BRANCH", "master")
 
 from dotenv import load_dotenv
 from pyrogram import filters
@@ -27,7 +16,7 @@ class Config:
     LOGGER_ID = int(getenv("LOGGER_ID", 0))
     OWNER_ID = int(getenv("OWNER_ID", 0))
     SUDO_USERS = list(map(int, getenv("SUDO_USERS", "6898413162").split()))
-    
+
     # heroku related configs
     HEROKU_APPNAME = getenv("HEROKU_APPNAME", None)
     HEROKU_APIKEY = getenv("HEROKU_APIKEY", None)
@@ -35,32 +24,34 @@ class Config:
     # github related configs
     PLUGINS_REPO = getenv("PLUGINS_REPO", "Badmunda98/PBXPLUGINS_2.0")
     DEPLOY_REPO = getenv("DEPLOY_REPO", "Badhacker98/PBX_2.0")
-
+    
     # storage dir: you may or may not edit
     DWL_DIR = "./downloads/"
     TEMP_DIR = "./temp/"
-    CHROME_BIN = getenv("CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
-    CHROME_DRIVER = getenv("CHROME_DRIVER", "/app/.chromedriver/bin/chromedriver")
-    FONT_PATH = "./Pbxbot/resources/fonts/Montserrat.ttf"
+    CHROME_BIN = getenv("CHROME_BIN", "/app/.chrome-for-testing/chrome-linux64/chrome")
+    CHROME_DRIVER = getenv(
+        "CHROME_DRIVER", "/app/.chrome-for-testing/chromedriver-linux64/chromedriver"
+    )
+    FONT_PATH = "./Hellbot/resources/fonts/Montserrat.ttf"
 
     # users config: do not edit
     AUTH_USERS = filters.user()
     BANNED_USERS = filters.user()
+    GACHA_BOTS = filters.user()
     MUTED_USERS = filters.user()
     DEVS = filters.user([6898413162, 6566179661])
     STAN_USERS = filters.user()
     FORCESUBS = filters.chat()
 
     # Global config: do not edit
+    AFK_CACHE = {}
     BOT_CMD_INFO = {}
     BOT_CMD_MENU = {}
     BOT_HELP = {}
-
     CMD_INFO = {}
     CMD_MENU = {}
     HELP_DICT = {}
-
-    AFK_CACHE = {}
+    TEMPLATES = {}
 
 
 class ENV:
@@ -92,8 +83,10 @@ class ENV:
     ping_template = "PING_TEMPLATE"
     pm_logger = "PM_LOGGER"
     pm_max_spam = "PM_MAX_SPAM"
+    pmpermit = "PMPERMIT"
     pmpermit_pic = "PMPERMIT_PIC"
     remove_bg_api = "REMOVE_BG_API"
+    thumbnail_url = "THUMBNAIL_URL"
     statistics_template = "STATISTICS_TEMPLATE"
     sticker_packname = "STICKER_PACKNAME"
     tag_logger = "TAG_LOGGER"
@@ -124,7 +117,6 @@ class Limits:
     StickerAniamtedLimit = 50
     StickerPackNameLength = 64
     StickerStaticLimit = 120
-
 
 class Symbols:
     anchor = "✰"
