@@ -421,7 +421,7 @@ async def globalmute(client: Client, message: Message):
             except BaseException:
                 failed += 1
 
-    await PbxPbx.edit(
+    await Pbx.edit(
         await gban_templates(
             gtype="𝖦-𝖬𝗎𝗍𝖾",
             name=user.mention,
