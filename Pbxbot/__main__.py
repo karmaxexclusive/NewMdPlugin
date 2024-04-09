@@ -1,7 +1,15 @@
 from pyrogram import idle
 
 from Pbxbot import __version__
-from Pbxbot.core import Config, ForcesubSetup, UserSetup, db, Pbxbot
+from Pbxbot.core import (
+    Config,
+    ForcesubSetup,
+    GachaBotsSetup,
+    TemplateSetup,
+    UserSetup,
+    db,
+    Pbxbot,
+)
 from Pbxbot.functions.tools import initialize_git
 from Pbxbot.functions.utility import BList, Flood, TGraph
 
@@ -11,6 +19,8 @@ async def main():
     await db.connect()
     await UserSetup()
     await ForcesubSetup()
+    await GachaBotsSetup()
+    await TemplateSetup()
     await Flood.updateFromDB()
     await BList.updateBlacklists()
     await TGraph.setup()
@@ -21,4 +31,3 @@ async def main():
 
 if __name__ == "__main__":
     Pbxbot.run(main())
-  
