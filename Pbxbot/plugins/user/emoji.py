@@ -127,7 +127,7 @@ rtemoji = [
 ]
 
 
-@Client.on_message("emoji", allow_stan=True)
+@Client.on_message(["emoji", "em"])
 async def emoji(client: Client, message: Message):
     op = await edit_or_reply(message, "`Emojifying the text..`")
     args = get_text(message)
@@ -148,7 +148,7 @@ async def emoji(client: Client, message: Message):
             result += a
     await op.edit(result)
     
-@Client.on_message("love", allow_stan=True)
+@Client.on_message(["heart", "dill"])
 async def cmoji(client: Client, message: Message):
     op = await edit_or_reply(message, "`Emojifying the text..`")
     args = get_text(message)
