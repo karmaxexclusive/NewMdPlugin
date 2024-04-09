@@ -1,5 +1,9 @@
-from pyrogram import *
-from pyrogram.types import *
+import os
+import random
+import time
+
+from pyrogram import Client
+from pyrogram.types import Message
 from Pbxbot.functions.basic import edit_or_reply, get_text
 
 
