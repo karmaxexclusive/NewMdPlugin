@@ -8,21 +8,24 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from telegraph import Telegraph
 
-from Pbxbot.core import ENV, db
+from Pbxbot.core import ENV, LOGS, db
 
 from .formatter import readable_time
 
 
 class TelegraphAPI:
     def __init__(self) -> None:
-        self.shortname: str = "Pbxbot"
+        self.shortname: str = "ThePbxBot"
         self.telegraph: Telegraph = None
 
     async def setup(self):
         shortname = await db.get_env(ENV.telegraph_account) or self.shortname
 
-        self.telegraph = Telegraph()
-        self.telegraph.create_account(shortname)
+        try:
+            self.telegraph = Telegraph(domain="telegra.ph")
+            self.telegraph.create_account(shortname)
+        except:
+            LOGS.warning("Failed to setup Telegraph API")
 
 
 class Gcast:
@@ -76,7 +79,7 @@ class Gcast:
                         await self._send_msg(dialog.chat.id, message, tag)
                         count += 1
                     except FloodWait as fw:
-                        await asyncio.sleep(fw.x)
+                        await asyncio.sleep(fw.value)
                         await self._send_msg(dialog.chat.id, message, tag)
                         count += 1
                     except Exception as e:
@@ -98,7 +101,7 @@ class Gcast:
                         await self._send_msg(dialog.chat.id, message, tag)
                         count += 1
                     except FloodWait as fw:
-                        await asyncio.sleep(fw.x)
+                        await asyncio.sleep(fw.value)
                         await self._send_msg(dialog.chat.id, message, tag)
                         count += 1
                     except Exception as e:
