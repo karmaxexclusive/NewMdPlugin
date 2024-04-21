@@ -9,6 +9,8 @@ from Pbxbot.plugins.help import HelpMenu
 handler = Config.HANDLERS[0]
 bot = Pbxbot.bot
 
+spam_chats = []
+
 bot_only = [ChatType.BOT]
 group_n_channel = [ChatType.GROUP, ChatType.SUPERGROUP, ChatType.CHANNEL]
 group_only = [ChatType.GROUP, ChatType.SUPERGROUP]
