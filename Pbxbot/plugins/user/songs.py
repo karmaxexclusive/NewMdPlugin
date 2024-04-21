@@ -44,7 +44,7 @@ async def dwlSong(_, message: Message):
             f"{yt_file}.mp3",
             caption=f"**🎧 𝖳𝗂𝗍𝗅𝖾:** {ytSearch['title']} \n\n**👀 𝖵𝗂𝖾𝗐𝗌:** `{ytSearch['views']}` \n**⌛ 𝖣𝗎𝗋𝖺𝗍𝗂𝗈𝗇:** `{ytSearch['duration']}`",
             duration=int(yt_data["duration"]),
-            performer="[тнє нєℓℓвσт]",
+            performer="[ᴛʜᴇ ᴘʙx 2.0]",
             title=ytSearch["title"],
             thumb=f"{yt_file}.jpg",
             progress=progress,
