@@ -197,6 +197,34 @@ async def pijtau(client: Client, message: Message):
         await asyncio.sleep(animation_interval)
         await message.edit(animation_chars[i % 14])
 
+@on_message("sex", allow_stan=True)
+async def pijtau(client: Client, message: Message):
+    if message.forward_from:
+        return
+    animation_interval = 1
+    animation_ttl = range(0, 14)
+    await message.edit("sex")
+    animation_chars = [        
+    "1 ❤️ love story",
+        "  😐             😕 \n/👕\         <👗\ \n 👖               /|",
+        "  😉          😳 \n/👕\       /👗\ \n  👖            /|",
+        "  😚            😒 \n/👕\         <👗> \n  👖             /|",
+        "  😍         ☺️ \n/👕\      /👗\ \n  👖          /|",
+        "  😍          😍 \n/👕\       /👗\ \n  👖           /|",
+        "  😘   😊 \n /👕\/👗\ \n   👖   /|",
+        " 😳  😁 \n /|\ /👙\ \n /     / |",
+        "😈    /😰\ \n<|\      👙 \n /🍆    / |",
+        "😅 \n/(),✊😮 \n /\         _/\\/|",
+        "😎 \n/\\_,__😫 \n  //    //       \\",
+        "😖 \n/\\_,💦_😋  \n  //         //        \\",
+        "  😭      ☺️ \n  /|\   /(👶)\ \n  /!\   / \ ",
+        "Abee aur kitna dekhoge be besharmi ki bhi hadd hoti hai..,The End 😂...",
+    ]
+    for i in animation_ttl:
+
+        await asyncio.sleep(animation_interval)
+        await message.edit(animation_chars[i % 14])
+
 
 @on_message("bomb", allow_stan=True)
 async def gahite(client: Client, message: Message):
