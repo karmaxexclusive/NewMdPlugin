@@ -3,7 +3,7 @@ import asyncio
 import aiohttp
 from pyrogram import filters, Client
 from pyrogram.types import Message
-from Pbx.bad.shizu import GetChatID, ReplyCheck
+from Pbxbot.bad.shizu import GetChatID, ReplyCheck
 from . import *
 
 
