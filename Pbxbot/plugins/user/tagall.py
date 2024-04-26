@@ -177,7 +177,7 @@ async def mention_allvc(client, message):
         usrtxt += f"[{usr.user.first_name}](tg://user?id={usr.user.id}) "
 
         if usrnum == 1:
-            txt = f"{usrtxt} {random.choice(GM_TAG)}"
+            txt = f"{usrtxt} {random.choice(GN_TAG)}"
             await client.send_message(chat_id, txt)
             await asyncio.sleep(4)
             usrnum = 0
