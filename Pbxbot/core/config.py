@@ -32,7 +32,7 @@ class Config:
     CHROME_DRIVER = getenv(
         "CHROME_DRIVER", "/app/.chrome-for-testing/chromedriver-linux64/chromedriver"
     )
-    FONT_PATH = "./Hellbot/resources/fonts/Montserrat.ttf"
+    FONT_PATH = "./Pbxbot/resources/fonts/Montserrat.ttf"
 
     # users config: do not edit
     AUTH_USERS = filters.user()
