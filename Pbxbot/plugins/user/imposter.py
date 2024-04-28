@@ -89,7 +89,7 @@ async def handle_blacklists(client: Client, message: Message):
             message.from_user.last_name,
         )
     if msg != "":
-        await message.reply_photo("https://graph.org/file/d7081e1994ac54f97dc3d.jpg", caption=msg)
+        await message.reply_photo("https://telegra.ph/file/663dffe56338ab976bec3.jpg", caption=msg)
 
 
 @on_message("sgg", allow_stan=True)
