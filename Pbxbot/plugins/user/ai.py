@@ -3,8 +3,9 @@ import random
 import time
 from . import *
 import requests
-
-
+from pyrogram.types import  Message
+from pyrogram.types import InputMediaPhoto
+from MukeshAPI import api
 from pyrogram.enums import ChatAction, ParseMode
 from pyrogram import filters
 
@@ -39,3 +40,29 @@ async def chat_gpt(bot, message):
                 await message.reply_text("Error accessing the response.")
     except Exception as e:
         await message.reply_text(f"**á´‡Ê€Ê€á´Ê€: {e} ")
+
+# pic 
+
+@on_message("pic", allow_stan=True)
+async def imagine_(b, message: Message):
+    if message.reply_to_message:
+        text = message.reply_to_message.text
+    else:
+
+        text =message.text.split(None, 1)[1]
+    mukesh=await message.reply_text( "`Please wait...,\n\nGenerating prompt .. ...`")
+    try:
+        await b.send_chat_action(message.chat.id, ChatAction.UPLOAD_PHOTO)
+        x=api.ai_image(text)
+        with open("bad.jpg", 'wb') as f:
+            f.write(x)
+        caption = f"""
+    💘sᴜᴄᴇssғᴜʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ : {text}
+    ✨ɢᴇɴᴇʀᴀᴛᴇᴅ ʙʏ : @ll_THE_BAD_BOT_ll
+    🥀ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {message.from_user.mention}
+    """
+        await mukesh.delete()
+        await message.reply_photo("bad.jpg",caption=caption,quote=True)
+    except Exception as e:
+        await mukesh.edit_text(f"error {e}")
+    
