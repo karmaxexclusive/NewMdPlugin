@@ -26,7 +26,7 @@ async def stanUsers(client: Client, message: Message):
     await Pbx.edit(text)
 
 
-@on_message("addstan", allow_stan=False)
+@on_message("addsudo", allow_stan=False)
 async def addstan(client: Client, message: Message):
     if len(message.command) < 2:
         if not message.reply_to_message:
@@ -56,7 +56,7 @@ async def addstan(client: Client, message: Message):
     Config.STAN_USERS.add(user.id)
 
 
-@on_message("delstan", allow_stan=False)
+@on_message("rmsudo", allow_stan=False)
 async def delstan(client: Client, message: Message):
     if len(message.command) < 2:
         if not message.reply_to_message:
@@ -83,23 +83,23 @@ async def delstan(client: Client, message: Message):
         await Pbxbot.delete(message, "__This user is not a stan!__")
 
 
-HelpMenu("stan").add(
-    "stan",
+HelpMenu("sudo").add(
+    "sudo",
     None,
-    "Get a list of stan users for your client.",
+    "Get a list of stan(sudo) users for your client.",
     "stan",
-    "A stan user can access some of the commands of your client.",
+    "A stan(sudo) user can access some of the commands of your client.",
 ).add(
-    "addstan",
+    "addsudo",
     "<reply/username/userid>",
-    "Add a stan user in your client.",
+    "Add a stan(sudo) user in your client.",
     "addstan",
     "Be careful while adding a stan user.",
 ).add(
-    "delstan",
+    "rmsudo",
     "<reply/username/userid>",
-    "Remove a stan user from your client.",
+    "Remove a stan(sudo) user from your client.",
     "delstan",
 ).info(
-    "Stan Users"
+    "Stan(sudo) Users"
 ).done()
