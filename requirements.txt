@@ -5,7 +5,6 @@ pydub
 cinemagoer
 edge-tts
 emoji
-MukeshAPI
 geopy
 git-python
 glitch_this
