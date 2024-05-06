@@ -14,17 +14,6 @@ from . import *
 
 DEFAULTUSER = "Man"
 
-@on_message("box", allow_stan=True)
-async def boxs(client: Client, message: Message):
-     if event.fwd_from:
-        return
-    event = await edit_or_reply(event, "`boxs...`")
-    deq = deque(list("🟥🟧🟨🟩🟦🟪🟫⬛⬜"))
-    for _ in range(999):
-        await asyncio.sleep(0.3)
-        await event.edit("".join(deq))
-        deq.rotate(1)
-
 
 @on_message("rain", allow_stan=True)
 async def raining(client: Client, message: Message):
