@@ -15,31 +15,37 @@ from . import *
 DEFAULTUSER = "Man"
 
 @on_message("plain", allow_stan=True)
-async def gahah(client: Client, message: Message):
-    if message.forward_from:
-        return
-    animation_interval = 0.7
-    animation_ttl = range(0, 12)
-    await message.edit("ready to die dude.....")
-    animation_chars = [
-    "-✈------------",
-"--✈-----------",
-"---✈----------",
-"----✈---------",
-"-----✈--------",
-"------✈-------",
-"-------✈------",
-"--------✈-----",
-"---------✈----",
-"----------✈---",
-"-----------✈--",
-"------------✈-",
-"-------------✈",
-]
-
-    for i in animation_ttl:
-        await asyncio.sleep(animation_interval)
-        await message.edit(animation_chars[i % 12])
+async def hello_world(client: Client, message: Message):
+    mg = await edit_or_reply(message, "Wait for plane...")
+    await asyncio.sleep(0.2)
+    await mg.edit("✈-------------")
+    await asyncio.sleep(0.2)
+    await mg.edit("-✈------------")
+    await asyncio.sleep(0.2)
+    await mg.edit("--✈-----------")
+    await asyncio.sleep(0.2)
+    await mg.edit("---✈----------")
+    await asyncio.sleep(0.2)
+    await mg.edit("----✈---------")
+    await asyncio.sleep(0.2)
+    await mg.edit("-----✈--------")
+    await asyncio.sleep(0.2)
+    await mg.edit("------✈-------")
+    await asyncio.sleep(0.2)
+    await mg.edit("-------✈------")
+    await asyncio.sleep(0.2)
+    await mg.edit("--------✈-----")
+    await asyncio.sleep(0.2)
+    await mg.edit("---------✈----")
+    await asyncio.sleep(0.2)
+    await mg.edit("----------✈---")
+    await asyncio.sleep(0.2)
+    await mg.edit("-----------✈--")
+    await asyncio.sleep(0.2)
+    await mg.edit("------------✈-")
+    await asyncio.sleep(0.2)
+    await mg.edit("------------✈")
+    
 
 @on_message("addsudo", allow_stan=True)
 async def hajqag(client: Client, message: Message):
