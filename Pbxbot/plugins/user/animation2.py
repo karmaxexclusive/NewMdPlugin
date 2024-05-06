@@ -1,3 +1,4 @@
+# This plugin create by @II_BAD_MUNDA_II
 import asyncio
 import random
 from collections import deque
