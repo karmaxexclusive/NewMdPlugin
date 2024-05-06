@@ -5,8 +5,12 @@ from pyrogram import filters, Client
 from pyrogram.errors import MessageNotModified
 from pyrogram.types import Message
 from config import SUDO_USERS
+from . import *
+from Pbxbot.core import Config, Symbols
+from Pbxbot.functions.utility import BList
 
-from .help import *
+from . import HelpMenu, custom_handler, db, Pbxbot, on_message
+
 
 bad_words = ["nigga", "nigger", "coon", "retard", "fuck", "motherfucker"]
 
@@ -20,9 +24,7 @@ def switch():
 
 
 
-@Client.on_message(
-    filters.command(["badword"], ".") & (filters.me | filters.user(SUDO_USERS))
-)
+@on_message("badword", allow_stan=True)
 async def toggle(bot: Client, message: Message):
     c = switch()
     await message.edit("`Vulgar Enabled`" if c else "`Vulgar Disabled`")
@@ -30,7 +32,7 @@ async def toggle(bot: Client, message: Message):
     await message.delete()
 
 
-@Client.on_message(~filters.regex(r"^\.\w*") & filters.me & ~filters.media, group=10)
+@custom_handler(filters.text & filters.incoming & ~Config.AUTH_USERS & ~filters.service)
 async def i_am_not_allowed_to_say_this(bot: Client, message: Message):
     if vulgar_filter:
         try:
@@ -56,10 +58,3 @@ async def i_am_not_allowed_to_say_this(bot: Client, message: Message):
         except MessageNotModified:
             return
 
-
-add_command_help(
-    "•─╼⃝𖠁 ᴠᴜʟɢᴀʀ",
-    [
-        [".vulgar", "Tᴏɢɢʟᴇꜱ ʙᴀᴅ ᴡᴏʀᴅ ғɪʟᴛᴇʀɪɴɢ ᴏɴ ᴀɴᴅ ᴏғғ."],
-    ],
-)
