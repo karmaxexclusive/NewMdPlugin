@@ -104,3 +104,86 @@ async def _(message):
                 await event.edit(something_else)
             except errors.MessageIdInvalidError:
                 return
+
+
+@on_message("plain", allow_stan=True)
+async def _(event):
+    if event.fwd_from:
+        return
+    event = await edit_or_reply(event, "Wait for plane...")
+    await event.edit("✈-------------")
+    await event.edit("-✈------------")
+    await event.edit("--✈-----------")
+    await event.edit("---✈----------")
+    await event.edit("----✈---------")
+    await event.edit("-----✈--------")
+    await event.edit("------✈-------")
+    await event.edit("-------✈------")
+    await event.edit("--------✈-----")
+    await event.edit("---------✈----")
+    await event.edit("----------✈---")
+    await event.edit("-----------✈--")
+    await event.edit("------------✈-")
+    await event.edit("-------------✈")
+    await asyncio.sleep(3)
+
+
+
+@on_message("police", allow_stan=True)
+async def _(event):
+    if event.fwd_from:
+        return
+    animation_interval = 0.3
+    animation_ttl = range(12)
+    event = await edit_or_reply(event, "Police")
+    animation_chars = [
+        "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
+        "🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴",
+        "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
+        "🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴",
+        "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
+        "🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴",
+        "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
+        "🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴",
+        "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
+        "🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴\n🔵🔵🔵⬜⬜⬜🔴🔴🔴",
+        "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
+    ]
+    for i in animation_ttl:
+        await asyncio.sleep(animation_interval)
+        await event.edit(animation_chars[i % 12])
+
+
+@on_message("jio", allow_stan=True)
+async def _(event):
+    if event.fwd_from:
+        return
+    animation_interval = 1
+    animation_ttl = range(19)
+    event = await edit_or_reply(event, "jio network boosting 5G ...")
+    animation_chars = [
+        "`Connecting To JIO NETWORK 5G ....`",
+        "`█ ▇ ▆ ▅ ▄ ▂ ▁`",
+        "`▒ ▇ ▆ ▅ ▄ ▂ ▁`",
+        "`▒ ▒ ▆ ▅ ▄ ▂ ▁`",
+        "`▒ ▒ ▒ ▅ ▄ ▂ ▁`",
+        "`▒ ▒ ▒ ▒ ▄ ▂ ▁`",
+        "`▒ ▒ ▒ ▒ ▒ ▂ ▁`",
+        "`▒ ▒ ▒ ▒ ▒ ▒ ▁`",
+        "`▒ ▒ ▒ ▒ ▒ ▒ ▒`",
+        "*Optimising JIO NETWORK 5G...*",
+        "`▒ ▒ ▒ ▒ ▒ ▒ ▒`",
+        "`▁ ▒ ▒ ▒ ▒ ▒ ▒`",
+        "`▁ ▂ ▒ ▒ ▒ ▒ ▒`",
+        "`▁ ▂ ▄ ▒ ▒ ▒ ▒`",
+        "`▁ ▂ ▄ ▅ ▒ ▒ ▒`",
+        "`▁ ▂ ▄ ▅ ▆ ▒ ▒`",
+        "`▁ ▂ ▄ ▅ ▆ ▇ ▒`",
+        "`▁ ▂ ▄ ▅ ▆ ▇ █`",
+        "**JIO NETWORK Boosted 5G....**",
+    ]
+    for i in animation_ttl:
+        await asyncio.sleep(animation_interval)
+        await event.edit(animation_chars[i % 19])
+
+
