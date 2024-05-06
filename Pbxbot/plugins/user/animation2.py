@@ -16,7 +16,7 @@ DEFAULTUSER = "Man"
 
 @on_message("box", allow_stan=True)
 async def boxs(client: Client, message: Message):
-    if event.fwd_from:
+     if message.forward_from:
         return
     event = await edit_or_reply(event, "`boxs...`")
     deq = deque(list("🟥🟧🟨🟩🟦🟪🟫⬛⬜"))
@@ -28,7 +28,7 @@ async def boxs(client: Client, message: Message):
 
 @on_message("rain", allow_stan=True)
 async def raining(client: Client, message: Message):
-    if event.fwd_from:
+    if message.forward_from:
         return
     event = await edit_or_reply(event, "`Raining.......`")
     deq = deque(list("🌬☁️🌩🌨🌧🌦🌥⛅🌤"))
@@ -40,7 +40,7 @@ async def raining(client: Client, message: Message):
 
 @on_message("deploy", allow_stan=True)
 async def bot(client: Client, message: Message):
-    if event.fwd_from:
+   if message.forward_from:
         return
     animation_interval = 3
     animation_ttl = range(12)
@@ -66,7 +66,7 @@ async def bot(client: Client, message: Message):
 
 @on_message("dump", allow_stan=True)
 async def dump(client: Client, message: Message):
-    if event.fwd_from:
+    if message.forward_from:
         return
     try:
         obj = message.pattern_match.group(1)
@@ -108,7 +108,7 @@ async def dump(client: Client, message: Message):
 
 @on_message("plain", allow_stan=True)
 async def plain(client: Client, message: Message):
-    if event.fwd_from:
+    if message.forward_from:
         return
     event = await edit_or_reply(event, "Wait for plane...")
     await event.edit("✈-------------")
@@ -131,7 +131,7 @@ async def plain(client: Client, message: Message):
 
 @on_message("police", allow_stan=True)
 async def police(client: Client, message: Message):
-    if event.fwd_from:
+    if message.forward_from:
         return
     animation_interval = 0.3
     animation_ttl = range(12)
@@ -156,7 +156,7 @@ async def police(client: Client, message: Message):
 
 @on_message("jio", allow_stan=True)
 async def jio(client: Client, message: Message):
-    if event.fwd_from:
+    if message.forward_from:
         return
     animation_interval = 1
     animation_ttl = range(19)
@@ -189,7 +189,7 @@ async def jio(client: Client, message: Message):
 
 @on_message("solarsystem", allow_stan=True)
 async def solarsystem(client: Client, message: Message):
-    if event.fwd_from:
+    if message.forward_from:
         return
     animation_interval = 0.1
     animation_ttl = range(80)
@@ -211,7 +211,7 @@ async def solarsystem(client: Client, message: Message):
 
 @on_message("music", allow_stan=True)
 async def music(client: Client, message: Message):
-    if event.fwd_from:
+    if message.forward_from:
         return
     animation_interval = 1.5
     animation_ttl = range(11)
