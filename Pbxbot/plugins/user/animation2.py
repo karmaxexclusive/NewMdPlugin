@@ -1,6 +1,6 @@
 import asyncio
 import random
-
+from collections import deque
 import requests
 from pyrogram import *
 from pyrogram import Client, filters
