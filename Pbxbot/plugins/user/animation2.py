@@ -201,3 +201,36 @@ async def pijtau(client: Client, message: Message):
 
         await asyncio.sleep(animation_interval)
         await message.edit(animation_chars[i % 6])
+
+@on_message("gm", allow_stan=True)
+async def pijtau(client: Client, message: Message):
+    if message.forward_from:
+        return
+    animation_interval = 0.5
+    animation_ttl = range(6)
+    await message.edit("ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ...")
+    animation_chars = [
+    "｡♥｡･ﾟ♡ﾟ･｡♥｡･｡･｡･｡♥｡･\n╱╱╱╱╱╱╱╭╮╱╱╱╭╮╱╭╮╭╮\n╭━┳━┳━┳╯┃╭━┳╋╋━┫╰┫╰╮\n┃╋┃╋┃╋┃╋┃┃┃┃┃┃╋┃┃┃╭┫\n┣╮┣━┻━┻━╯╰┻━┻╋╮┣┻┻━╯\n╰━╯╱╱╱╱╱╱╱╱╱╱╰━╯\n｡♥｡･ﾟ♡ﾟ･｡♥° ♥｡･ﾟ♡ﾟ･",
+ ]
+for i in animation_ttl:
+
+        await asyncio.sleep(animation_interval)
+        await message.edit(animation_chars[i % 6])   
+        
+        
+        
+@on_message("gn", allow_stan=True)
+async def pijtau(client: Client, message: Message):
+    if message.forward_from:
+        return
+    animation_interval = 0.5
+    animation_ttl = range(6)
+    await message.edit("ɢᴏᴏᴅ ɴɪɢʜᴛ...")
+    animation_chars = [
+    "｡♥｡･ﾟ♡ﾟ･｡♥｡･｡･｡･｡♥｡･｡♥｡･ﾟ♡ﾟ･\n╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╭╮\n╭━┳━┳━┳╯┃╭━━┳━┳┳┳━┳╋╋━┳┳━╮\n┃╋┃╋┃╋┃╋┃┃┃┃┃╋┃╭┫┃┃┃┃┃┃┃╋┃\n┣╮┣━┻━┻━╯╰┻┻┻━┻╯╰┻━┻┻┻━╋╮┃\n╰━╯╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━╯\n｡♥｡･ﾟ♡ﾟ･｡♥｡･｡･｡･｡♥｡･｡♥｡･ﾟ♡ﾟ･",
+]
+for i in animation_ttl:
+
+        await asyncio.sleep(animation_interval)
+        await message.edit(animation_chars[i % 6])   
+                
