@@ -4,7 +4,6 @@ import re
 from pyrogram import filters, Client
 from pyrogram.errors import MessageNotModified
 from pyrogram.types import Message
-from config import SUDO_USERS
 from . import *
 from Pbxbot.core import Config, Symbols
 from Pbxbot.functions.utility import BList
