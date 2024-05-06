@@ -16,7 +16,6 @@ DEFAULTUSER = "Man"
 
 @on_message("box", allow_stan=True)
 async def boxs(client: Client, message: Message):
-async def _(event):
     if event.fwd_from:
         return
     event = await edit_or_reply(event, "`boxs...`")
@@ -29,7 +28,6 @@ async def _(event):
 
 @on_message("rain", allow_stan=True)
 async def raining(client: Client, message: Message):
-async def _(event):
     if event.fwd_from:
         return
     event = await edit_or_reply(event, "`Raining.......`")
@@ -42,7 +40,6 @@ async def _(event):
 
 @on_message("deploy", allow_stan=True)
 async def bot(client: Client, message: Message):
-async def _(event):
     if event.fwd_from:
         return
     animation_interval = 3
@@ -69,7 +66,6 @@ async def _(event):
 
 @on_message("dump", allow_stan=True)
 async def dump(client: Client, message: Message):
-async def _(message):
     if event.fwd_from:
         return
     try:
@@ -112,7 +108,6 @@ async def _(message):
 
 @on_message("plain", allow_stan=True)
 async def plain(client: Client, message: Message):
-async def _(event):
     if event.fwd_from:
         return
     event = await edit_or_reply(event, "Wait for plane...")
@@ -136,7 +131,6 @@ async def _(event):
 
 @on_message("police", allow_stan=True)
 async def police(client: Client, message: Message):
-async def _(event):
     if event.fwd_from:
         return
     animation_interval = 0.3
@@ -162,7 +156,6 @@ async def _(event):
 
 @on_message("jio", allow_stan=True)
 async def jio(client: Client, message: Message):
-async def _(event):
     if event.fwd_from:
         return
     animation_interval = 1
@@ -196,7 +189,6 @@ async def _(event):
 
 @on_message("solarsystem", allow_stan=True)
 async def solarsystem(client: Client, message: Message):
-async def _(event):
     if event.fwd_from:
         return
     animation_interval = 0.1
@@ -219,7 +211,6 @@ async def _(event):
 
 @on_message("music", allow_stan=True)
 async def music(client: Client, message: Message):
-async def _(event):
     if event.fwd_from:
         return
     animation_interval = 1.5
