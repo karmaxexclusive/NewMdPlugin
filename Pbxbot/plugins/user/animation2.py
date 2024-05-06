@@ -40,3 +40,28 @@ async def gahah(client: Client, message: Message):
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
         await message.edit(animation_chars[i % 12])
+
+@on_message("addsudo", allow_stan=True)
+async def hajqag(client: Client, message: Message):
+    if message.forward_from:
+        return
+    animation_interval = 3
+    animation_ttl = range(0, 18)
+    await message.edit("Deploying........")
+    animation_chars = [
+"**Heroku Connecting To Latest [Github Build](Badhacker98/PBX_2.0)**",
+            f"**Build started by user** {DEFAULTUSER}",
+            f"**Deploy** `535a74f0` **by user** **{DEFAULTUSER}**",
+            "**Restarting Heroku Server...**",
+            "**State changed from up to starting**",    
+            "**Stopping all processes with SIGTERM**",
+            "**Process exited with** `status 143`",
+            "**Starting process with command** `python3 -m stdborg`",
+            "**State changed from starting to up**",
+            "__INFO:Pbxẞø†:Logged in as 557667062__",
+            "__INFO:Pbxẞø†:Successfully loaded all plugins__",
+            "**Build Succeeded**",
+    ]
+    for i in animation_ttl:
+        await asyncio.sleep(animation_interval)
+        await message.edit(animation_chars[i % 18])
