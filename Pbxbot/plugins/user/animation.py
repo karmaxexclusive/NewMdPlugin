@@ -642,7 +642,7 @@ async def adadino(client: Client, message: Message):
 
 
 
-@on_message("snake", allow_stan=True)
+@on_message("cobra", allow_stan=True)
 async def snake(client: Client, message: Message):
     await edit_or_reply(
         message,
