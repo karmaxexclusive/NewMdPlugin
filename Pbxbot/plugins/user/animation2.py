@@ -18,7 +18,6 @@ DEFAULTUSER = "Man"
 async def boxs(client: Client, message: Message):
      if event.fwd_from:
         return
-
     event = await edit_or_reply(event, "`boxs...`")
     deq = deque(list("🟥🟧🟨🟩🟦🟪🟫⬛⬜"))
     for _ in range(999):
