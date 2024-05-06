@@ -26,7 +26,7 @@ def switch():
 @on_message("badword", allow_stan=True)
 async def toggle(bot: Client, message: Message):
     c = switch()
-    await message.edit("`Vulgar Enabled`" if c else "`Vulgar Disabled`")
+    await message.edit("`on`" if c else "`off`")
     await asyncio.sleep(3)
     await message.delete()
 
