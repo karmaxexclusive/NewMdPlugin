@@ -16,8 +16,9 @@ DEFAULTUSER = "Man"
 
 @on_message("box", allow_stan=True)
 async def boxs(client: Client, message: Message):
-     if message.forward_from:
+     if event.fwd_from:
         return
+
     event = await edit_or_reply(event, "`boxs...`")
     deq = deque(list("🟥🟧🟨🟩🟦🟪🟫⬛⬜"))
     for _ in range(999):
