@@ -134,10 +134,27 @@ async def hearts(client: Client, message: Message):
    await message.edit("🌨")
    await asyncio.sleep(0.5)
    await message.edit("🌧")
+   await asyncio.sleep(0.5)
    await message.edit("🌦")
    await asyncio.sleep(3)
    await message.edit("🌨🌩🌦🌥⛅🌤") 
     
+@on_message("shizu", allow_stan=True)
+async def hearts(client: Client, message: Message):
+   await phase1(message)
+   await asyncio.sleep(SLEEP * 3)
+   await message.edit("😘😘ʙᴀʙʏ sᴜɴᴏ ɴᴀ😘😘")
+   await asyncio.sleep(0.5)
+   await message.edit("😍ᴍᴇʀᴀ ʙᴀᴄʜᴀ 😍")
+   await asyncio.sleep(0.5)
+   await message.edit("😍ʙᴀʙʏ ɪ ʟᴏᴠᴇ ʟᴏᴠᴇ ʟᴏᴠᴇ ʏᴏᴜ🥰")
+   await message.edit("😘ʙᴀʙʏ ɪ ᴍɪss ʏᴏᴜ sᴏ ᴍᴜᴄʜ🙁")
+   await asyncio.sleep(0.5)
+   await message.edit("🫣ᴛᴜ ᴍᴇʀɪ ᴀ ᴊᴀᴀɴ ᴍᴇᴛɪ 🤗")
+   await message.edit("💋ʙᴀʙʏ ɪ ᴋɪss ʏᴏᴜ 🥰")
+   await asyncio.sleep(3)
+   await message.edit("🙈sʜɪᴢᴜ ᴊᴀᴀɴ ɪ ʟᴏᴠᴇ ʏᴏᴜ ɪ ᴍɪss ʏᴏᴜ ɪ ᴋɪss ʏᴏᴜ💫🥰❤️") 
+
 
 @on_message("loveu", allow_stan=True)
 async def _(client: Client, message: Message):
