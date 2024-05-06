@@ -122,6 +122,22 @@ async def hearts(client: Client, message: Message):
     await asyncio.sleep(3)
     await message.edit("[⎯꯭̽🇨🇦꯭꯭ ⃪В꯭α꯭∂ ꯭м꯭υ꯭η∂꯭α_꯭آآ⎯꯭ ꯭̽🌸](https://t.me/II_BAD_MUNDA_II)")
 
+@on_message("rain", allow_stan=True)
+async def hearts(client: Client, message: Message):
+   await phase1(message)
+   await asyncio.sleep(SLEEP * 3)
+   await message.edit("🌬")
+   await asyncio.sleep(0.5)
+   await message.edit("☁️")
+   await asyncio.sleep(0.5)
+   await message.edit("🌩")
+   await message.edit("🌨")
+   await asyncio.sleep(0.5)
+   await message.edit("🌧")
+   await message.edit("🌦")
+   await asyncio.sleep(3)
+   await message.edit("🌨🌩🌦🌥⛅🌤") 
+    
 
 @on_message("loveu", allow_stan=True)
 async def _(client: Client, message: Message):
