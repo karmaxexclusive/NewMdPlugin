@@ -5,7 +5,7 @@ from pyrogram.types import Message
 from . import HelpMenu, Pbxbot, on_message
 
 
-@on_message("ddel", allow_stan=True)
+@on_message("del", allow_stan=True)
 async def del_msg(client: Client, message: Message):
     msg_src = message.reply_to_message
     if msg_src:
@@ -20,7 +20,7 @@ async def del_msg(client: Client, message: Message):
 
 
 
-@on_message("ppurge", allow_stan=True)
+@on_message("purge", allow_stan=True)
 async def purge(client: Client, message: Message):
     ex = await message.edit_text("`Starting To Purge Messages!`")
     msg = message.reply_to_message
@@ -52,7 +52,7 @@ async def purge(client: Client, message: Message):
 
 
 
-@on_message("ppurgeme", allow_stan=True)
+@on_message("purgeme", allow_stan=True)
 async def purgeme(client: Client, message: Message):
     if len(message.command) != 2:
         return await message.delete()
