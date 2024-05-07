@@ -14,7 +14,7 @@ def _chunk(from_msg: int, to_msg: int):
         curr_msg += 100
 
 
-@on_message("purge", allow_stan=True)
+@on_message("ppurge", allow_stan=True)
 async def purgeMsg(client: Client, message: Message):
     if not message.reply_to_message:
         return await Pbxbot.delete(
@@ -35,7 +35,7 @@ async def purgeMsg(client: Client, message: Message):
     await Pbxbot.delete(Pbx, f"__🧹 Purged {deleted} messages.__")
 
 
-@on_message("purgeme", allow_stan=True)
+@on_message("ppurgeme", allow_stan=True)
 async def purgeMe(client: Client, message: Message):
     if len(message.command) < 2:
         return await Pbxbot.delete(
@@ -58,7 +58,7 @@ async def purgeMe(client: Client, message: Message):
     await Pbxbot.delete(Pbx, f"__🧹 Purged {count} messages.__")
 
 
-@on_message("purgeuser", allow_stan=True)
+@on_message("ppurgeuser", allow_stan=True)
 async def purgeUser(client: Client, message: Message):
     if not message.reply_to_message or not message.reply_to_message.from_user:
         return await Pbxbot.delete(
@@ -87,7 +87,7 @@ async def purgeUser(client: Client, message: Message):
     )
 
 
-@on_message("del", allow_stan=True)
+@on_message("ddel", allow_stan=True)
 async def delMsg(_, message: Message):
     if not message.reply_to_message:
         return await Pbxbot.delete(
