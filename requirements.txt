@@ -30,4 +30,5 @@ telegraph
 tgcrypto
 Unidecode
 wikipedia
+py-tgcalls==2.0.0
 yt-dlp @ git+https://github.com/Badmunda98/yt-dp-fork
