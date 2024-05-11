@@ -40,6 +40,23 @@ async def chat_gpt(bot, message):
                 await message.reply_text("Error accessing the response.")
     except Exception as e:
         await message.reply_text(f"**á´‡Ê€Ê€á´Ê€: {e} ")
+#2ndai 
+
+@on_message("chatgpt", allow_stan=True)
+async def chat_gpt(bot, message):
+    
+    try:
+        await bot.send_chat_action(message.chat.id, ChatAction.TYPING)
+        if len(message.command) < 2:
+            await message.reply_text(
+            "Example:**\n\n`/chatgpt Where is TajMahal?`")
+        else:
+            a = message.text.split(' ', 1)[1]
+            r=api.gemini(a)["results"]
+            await message.reply_text(f" {r} \n\n🎉ᴘᴏᴡᴇʀᴇᴅ ʙʏ @ll_THE_BAD_BOT_ll ", parse_mode=ParseMode.MARKDOWN)     
+    except Exception as e:
+        await message.reply_text(f"**ᴇʀʀᴏʀ: {e} ")
+
 
 # pic 
 
