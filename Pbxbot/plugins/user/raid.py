@@ -2,7 +2,7 @@ import asyncio
 from random import choice
 from pyrogram.types import Message
 from pyrogram import filters, Client
-from Pbxbot.bad.bad import RAID
+from Pbxbot.bad.sukh import RAID
 from . import *
 
 @on_message("raid", allow_stan=True)
