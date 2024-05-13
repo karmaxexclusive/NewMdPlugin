@@ -2,7 +2,7 @@ import asyncio
 from random import choice
 from pyrogram.types import Message
 from pyrogram import filters, Client
-from Pbxbot.bad.sukh import RAID, PBRAID
+from Pbxbot.bad.sukh import RAID, PBIRAID
 from . import *
 
 @on_message("raid", allow_stan=True)
@@ -41,7 +41,7 @@ async def raid(x: Client, e: Message):
           ok = await x.get_users(kex[1])
           counts = int(PbxTeam[0])
           for _ in range(counts):
-                reply = choice(PBRAID)
+                reply = choice(PBIRAID)
                 msg = f"[{ok.first_name}](tg://user?id={ok.id}) {reply}"
                 await x.send_message(e.chat.id, msg)
                 await asyncio.sleep(0.1)
@@ -51,7 +51,7 @@ async def raid(x: Client, e: Message):
           ok = await x.get_users(user_id)
           counts = int(PbxTeam[0])
           for _ in range(counts):
-                reply = choice(PBRAID)
+                reply = choice(PBIRAID)
                 msg = f"[{ok.first_name}](tg://user?id={ok.id}) {reply}"
                 await x.send_message(e.chat.id, msg)
                 await asyncio.sleep(0.1)
