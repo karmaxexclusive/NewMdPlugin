@@ -72,7 +72,7 @@ async def font_ubot(client: Client, message: Message):
         return await message.reply("Reply Text And Fill In Font Name!!!")
 
 
-@on_message("ls", allow_stan=True)
+@on_message("fontlist", allow_stan=True)
 async def fonts(client: Client, message: Message):
     await message.reply(
         "<b>ᴅᴀғᴛᴀʀ ғᴏɴᴛs</b>\n\n"
