@@ -2,7 +2,7 @@ import asyncio
 from random import choice
 from pyrogram.types import Message
 from pyrogram import filters, Client
-from Pbxbot.bad.sukh import RAID, PBIRAID, OneWord, HIRAID
+from Pbxbot.bad.sukh import RAID, PBIRAID, OneWord, HIRAID, PORM
 from . import *
 
 @on_message("raid", allow_stan=True)
@@ -117,3 +117,21 @@ async def raid(x: Client, e: Message):
       else:
             await e.reply_text("ʜɪʀᴀɪᴅ 10 <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ ᴏʀ ᴜꜱᴇʀɴᴀᴍᴇ>")  
 
+
+#porn
+@on_message("pornspam", allow_stan=True)
+async def prns(client: Client, message: Message):
+    r = await message.reply_text("`Processing..`")
+    quantity = message.command[1]
+    failed = 0
+    quantity = int(quantity)
+    await r.delete()
+    if int(message.chat.id) in GROUP:
+        await message.reply_text("`You Cannot Pornspam In Developer Chats!`")
+        return
+    for _ in range(quantity):
+        try:
+            file = random.choice(PORM)            
+            await client.send_video(chat_id=message.chat.id, video=file)
+        except FloodWait as e:
+            await asyncio.sleep(e.x)
