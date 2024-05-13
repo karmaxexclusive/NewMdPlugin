@@ -2,6 +2,7 @@ import asyncio
 from random import choice
 from pyrogram.types import Message
 from pyrogram import filters, Client
+from Pbxbot.bad.sukh import *
 from Pbxbot.bad.sukh import RAID, PBIRAID, OneWord, HIRAID, PORM
 from . import *
 
