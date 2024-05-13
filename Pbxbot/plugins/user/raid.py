@@ -122,13 +122,13 @@ async def raid(x: Client, e: Message):
 #porn
 @on_message("pornspam", allow_stan=True)
 async def prns(client: Client, message: Message):
-    r = await message.reply_text("`Processing..`")
+    r = await message.reply_text("`ʀᴜᴋᴏ ʙʙʏs🤤🫧`")
     quantity = message.command[1]
     failed = 0
     quantity = int(quantity)
     await r.delete()
     if int(message.chat.id) in GROUP:
-        await message.reply_text("`You Cannot Pornspam In Developer Chats!`")
+        await message.reply_text("`ʏᴏᴜ ᴄᴀɴɴᴏᴛ ᴘᴏʀɴꜱᴘᴀᴍ ɪɴ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴄʜᴀᴛꜱ!`")
         return
     for _ in range(quantity):
         try:
