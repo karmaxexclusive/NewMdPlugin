@@ -168,4 +168,4 @@ async def emoji(x: Client, e: Message):
                 await asyncio.sleep(0.1)
 
       else:
-            await e.reply_text(".emoji 10 <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ ᴏʀ ᴜꜱᴇʀɴᴀᴍᴇ>
+            await e.reply_text(".emoji 10 <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ ᴏʀ ᴜꜱᴇʀɴᴀᴍᴇ>")
