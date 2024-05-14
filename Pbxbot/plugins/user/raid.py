@@ -7,7 +7,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from pyrogram import filters, Client
 from Pbxbot.bad.sukh import *
-from Pbxbot.bad.sukh import RAID, PBIRAID, OneWord, HIRAID, PORM
+from Pbxbot.bad.sukh import RAID, PBIRAID, OneWord, HIRAID, PORM, EMOJI
 from . import *
 
 @on_message("raid", allow_stan=True)
@@ -140,3 +140,32 @@ async def prns(client: Client, message: Message):
             await client.send_video(chat_id=message.chat.id, video=file)
         except FloodWait as e:
             await asyncio.sleep(e.x)
+
+
+#eomji
+
+@on_message("imoji", allow_stan=True)
+async def emoji(x: Client, e: Message):
+      PBX = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
+
+      if len(PBX) == 2:
+          ok = await x.get_users(PBX[1])
+          counts = int(PBX[0])
+          for _ in range(counts):
+                reply = choice(EMOJI)
+                msg = f"[{ok.first_name}](tg://user?id={ok.id}) {reply}"
+                await x.send_message(e.chat.id, msg)
+                await asyncio.sleep(0.1)
+
+      elif e.reply_to_message:
+          user_id = e.reply_to_message.from_user.id
+          ok = await x.get_users(user_id)
+          counts = int(PBX[0])
+          for _ in range(counts):
+                reply = choice(EMOJI)
+                msg = f"[{ok.first_name}](tg://user?id={ok.id}) {reply}"
+                await x.send_message(e.chat.id, msg)
+                await asyncio.sleep(0.1)
+
+      else:
+            await e.reply_text(".emoji 10 <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ ᴏʀ ᴜꜱᴇʀɴᴀᴍᴇ>
