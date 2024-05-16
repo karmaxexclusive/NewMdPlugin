@@ -246,13 +246,13 @@ async def help_close_cb(_, cb: CallbackQuery):
         buttons = [
             [
                 InlineKeyboardButton("⚜️ ᴅᴇᴘʟᴏʏ ⚜️ ", url="https://github.com/Badhacker98/PBX_2.0/fork"),
-                InlineKeyboardButton("", url="https://t.me/II_BAD_MUNDA_II"),
+                InlineKeyboardButton("", url="https://t.me/ll_BAD_MUNDA_ll"),
             ],
             [
                 InlineKeyboardButton("🦋 𝐏ʙx 𝐁ᴏᴛ 𝐒ᴜᴘᴘᴏʀᴛ ❤️", url="https://t.me/ll_THE_BAD_BOT_ll"),
             ],
             [
-                InlineKeyboardButton("⏤͟͟͞͞‌ٖ🥀➣Bᴀᴅ❤︎ ᴍᴜɴᴅᴀ ➻ >•⏤͟͟͞͞‌ٖٖٖ", url="https://t.me/II_BAD_BBY_II"),
+                InlineKeyboardButton("⏤͟͟͞͞‌ٖ🥀➣Bᴀᴅ❤︎ ᴍᴜɴᴅᴀ ➻ >•⏤͟͟͞͞‌ٖٖٖ", url="https://t.me/ll_BAD_MUNDA_ll"),
             ],
             [
                 InlineKeyboardButton("💥 sᴜᴘᴏᴏʀᴛ 💥", url="https://t.me/II_CHAT_HUB_II"),
