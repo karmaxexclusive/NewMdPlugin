@@ -4,7 +4,7 @@ from typing import Dict, Union
 
 from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
 
-from Pbxbot.core.config import SUKH
+from Pbxbot.core.config import BAD
 
 mongo = MongoCli(SUKH)
 db = mongo.PBXUSERBOT
