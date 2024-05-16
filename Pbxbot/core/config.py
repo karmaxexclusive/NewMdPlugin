@@ -16,7 +16,6 @@ class Config:
     LOGGER_ID = int(getenv("LOGGER_ID", 0))
     OWNER_ID = int(getenv("OWNER_ID", 0))
     SUDO_USERS = list(map(int, getenv("SUDO_USERS", "6898413162").split()))
-    BAD = getenv("BAD", "mongodb+srv://Badmunda_13:badmunda50@cluster0.9oyzqux.mongodb.net/?retryWrites=true&w=majority")
 
     # heroku related configs
     HEROKU_APPNAME = getenv("HEROKU_APPNAME", None)
