@@ -6,7 +6,7 @@ from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
 
 from Pbxbot.core.config import BAD
 
-mongo = MongoCli(SUKH)
+mongo = MongoCli(BAD)
 db = mongo.PBXUSERBOT
 
 coupledb = db.couple
