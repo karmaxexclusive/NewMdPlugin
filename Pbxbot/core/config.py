@@ -137,6 +137,7 @@ class Symbols:
     triangle_left = "◂"
     triangle_right = "▸"
 
+FORCESUBS = filters.chat()
 
 os_configs = [
     "API_HASH",
