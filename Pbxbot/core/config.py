@@ -36,12 +36,13 @@ class Config:
 
     # users config: do not edit
     AUTH_USERS = filters.user()
+    FORCESUBS = filters.chat()
     BANNED_USERS = filters.user()
     GACHA_BOTS = filters.user()
     MUTED_USERS = filters.user()
     DEVS = filters.user([6352107773, 6898413162, 5992123070])
     STAN_USERS = filters.user()
-    FORCESUBS = filters.chat()
+    
 
     # Global config: do not edit
     AFK_CACHE = {}
