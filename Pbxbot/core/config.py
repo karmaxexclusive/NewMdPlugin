@@ -20,6 +20,7 @@ class Config:
     # heroku related configs
     HEROKU_APPNAME = getenv("HEROKU_APPNAME", None)
     HEROKU_APIKEY = getenv("HEROKU_APIKEY", None)
+    FORCESUBS = filters.chat()
 
     # github related configs
     PLUGINS_REPO = getenv("PLUGINS_REPO", "Badmunda98/PBXPLUGINS_2.0")
@@ -136,8 +137,6 @@ class Symbols:
     radio_unselect = "〇"
     triangle_left = "◂"
     triangle_right = "▸"
-
-FORCESUBS = filters.chat()
 
 os_configs = [
     "API_HASH",
