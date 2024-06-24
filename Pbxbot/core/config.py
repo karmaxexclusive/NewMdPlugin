@@ -37,7 +37,6 @@ class Config:
 
     # users config: do not edit
     AUTH_USERS = filters.user()
-    FORCESUBS = filters.chat()
     BANNED_USERS = filters.user()
     GACHA_BOTS = filters.user()
     MUTED_USERS = filters.user()
