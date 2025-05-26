@@ -48,11 +48,11 @@ class PbxClient(Client):
                         f"Client #{i+1}: '{me.first_name}' is not in Logger Group! Check and add manually for proper functioning."
                     )
                 try:
-                    await client.join_chat("https://t.me/ll_THE_BAD_BOT_ll")
+                    await client.join_chat("https://t.me/Fine_N_Ok")
                 except:
                     pass
                 try:
-                    await client.join_chat("https://t.me/PBX_NETWORK")
+                    await client.join_chat("https://t.me/My_Logs_Gc")
                 except:
                     pass
             except Exception as e:
@@ -110,14 +110,14 @@ class PbxClient(Client):
     async def start_message(self, version: dict) -> None:
         await self.bot.send_animation(
                         Config.LOGGER_ID,
-            "https://telegra.ph/file/48a4bb97b1b6e64184223.mp4",
-            f"**{Symbols.check_mark} ᴘʙx 2.0 ɪs.ɴᴏᴡ ᴏɴʟɪɴᴇ!**\n\n"
+            "https://graph.org/file/9bec9bc841da2fad3f2ae-b3f23118473a57d1bc.jpg",
+            f"**{Symbols.check_mark} ɴᴇᴡ ᴍᴏᴅᴜʟᴇ 🇮🇳 ɪs.ɴᴏᴡ ᴏɴʟɪɴᴇ!**\n\n"
             f"**{Symbols.triangle_right}  ᴄʟɪᴇɴᴛs ➠ ** `{len(self.users)}`\n"
             f"**{Symbols.triangle_right} ᴘʟᴜɢɪɴs ➠ ** `{len(Config.CMD_MENU)}`\n"
             f"**{Symbols.triangle_right} ᴄᴏᴍᴍᴀɴᴅs ➠ ** `{len(Config.CMD_INFO)}`\n"
             f"**{Symbols.triangle_right} sᴛᴀɴ ᴜsᴇʀs ➠ ** `{len(Config.STAN_USERS)}`\n"
             f"**{Symbols.triangle_right} ᴀᴜᴛʜ ᴜsᴇʀs ➠ ** `{len(Config.AUTH_USERS)}`\n\n"
-            f"**{Symbols.triangle_right} ᴘʙx 2.0 ᴠᴇʀsɪᴏɴ ➠ ** `{version['Pbxbot']}`\n"
+            f"**{Symbols.triangle_right} ɴᴇᴡ ᴍᴏᴅᴜʟᴇ 🇮🇳 ᴠᴇʀsɪᴏɴ ➠ ** `{version['Pbxbot']}`\n"
             f"**{Symbols.triangle_right}  ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ ➠ ** `{version['pyrogram']}`\n"
             f"**{Symbols.triangle_right}  ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➠ ** `{version['python']}`\n\n"
             f"**</> @ll_THE_BAD_BOT_ll**",
@@ -127,13 +127,13 @@ class PbxClient(Client):
                 [
                     [
                         InlineKeyboardButton("💫 sᴛᴀʀᴛ ᴍᴇ", url=f"https://t.me/{self.bot.me.username}?start=start"),
-                        InlineKeyboardButton("💖 ʀᴇᴘᴏ", url="https://github.com/Badhacker98/PBX_2.0/fork"),
+                        InlineKeyboardButton("💖 ʀᴇᴘᴏ", url="https://t.me/Fine_N_Ok"),
                     ],
                     [
-                        InlineKeyboardButton("⎯꯭̽🇨🇦꯭꯭ ⃪В꯭α꯭∂ ꯭м꯭υ꯭η∂꯭α_꯭آآ⎯꯭ ꯭̽🌸", url="https://t.me/ll_BAD_MUNDA_ll"),
+                        InlineKeyboardButton("🇮🇳 ᴍᴀsᴛᴇʀ", url="https://t.me/Fumkies"),
                     ],
                     [
-                    InlineKeyboardButton("🦋 𝐏ʙx 𝐁ᴏᴛ 𝐒ᴜᴘᴘᴏʀᴛ ❤️", url="https://t.me/ll_THE_BAD_BOT_ll"),
+                    InlineKeyboardButton("🦋 𝐒ᴜᴘᴘᴏʀᴛ ❤️", url="https://t.me/My_Logs_Gc"),
                     ],
                 ]
             ),
@@ -141,7 +141,7 @@ class PbxClient(Client):
 
     async def startup(self) -> None:
         LOGS.info(
-            f"{Symbols.bullet * 3} Starting PBX 2.0 Client & User {Symbols.bullet * 3}"
+            f"{Symbols.bullet * 3} Starting New Module 🇮🇳 Client & User {Symbols.bullet * 3}"
         )
         await self.start_bot()
         await self.start_user()
