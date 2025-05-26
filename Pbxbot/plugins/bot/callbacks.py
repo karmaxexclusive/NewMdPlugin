@@ -79,7 +79,7 @@ async def bot_help_cmd_cb(_, cb: CallbackQuery):
     result += (
         f"\n\n**{Symbols.arrow_right} 𝖣𝖾𝗌𝖼𝗋𝗂𝗉𝗍𝗂𝗈𝗇:** __{cmd_dict['description']}__"
     )
-    result += f"\n\n**<\> @ll_THE_BAD_BOT_ll ❤️**"
+    result += f"\n\n**<\> @MY_LOGS_GC ❤️**"
 
     buttons = [
         [
@@ -189,7 +189,7 @@ async def help_cmd_cb(_, cb: CallbackQuery):
     if cmd_dict["note"]:
         result += f"\n\n**{Symbols.arrow_right} 𝖭𝗈𝗍𝖾:** __{cmd_dict['note']}__"
 
-    result += f"\n\n**<\> @ll_THE_BAD_BOT_ll ❤️**"
+    result += f"\n\n**<\> @MY_LOGS_GC ❤️**"
 
     buttons = [
         [
@@ -245,18 +245,18 @@ async def help_close_cb(_, cb: CallbackQuery):
     elif action == "source":
         buttons = [
             [
-                InlineKeyboardButton("⚜️ ᴅᴇᴘʟᴏʏ ⚜️ ", url="https://github.com/Badhacker98/PBX_2.0/fork"),
-                InlineKeyboardButton("", url="https://t.me/ll_BAD_MUNDA_ll"),
+                InlineKeyboardButton("⚜️ ᴅᴇᴘʟᴏʏ ⚜️ ", url="https://t.me/FUMKIES"),
+                InlineKeyboardButton("🇮🇳 ᴍᴏᴇᴡ ʙᴏᴛs 🇮🇳", url="https://t.me/TEN_SPAM_BOTS"),
             ],
             [
-                InlineKeyboardButton("🦋 𝐏ʙx 𝐁ᴏᴛ 𝐒ᴜᴘᴘᴏʀᴛ ❤️", url="https://t.me/ll_THE_BAD_BOT_ll"),
+                InlineKeyboardButton("🦋 sᴜᴘᴘᴏʀᴛ ᴠ𝟷 🦋", url="https://t.me/MY_LOGS_GC"),
             ],
             [
-                InlineKeyboardButton("⏤͟͟͞͞‌ٖ🥀➣Bᴀᴅ❤︎ ᴍᴜɴᴅᴀ ➻ >•⏤͟͟͞͞‌ٖٖٖ", url="https://t.me/ll_BAD_MUNDA_ll"),
+                InlineKeyboardButton("👻 ᴍᴀsᴛᴇʀ 👻", url="https://t.me/FUMKIES"),
             ],
             [
-                InlineKeyboardButton("💥 sᴜᴘᴏᴏʀᴛ 💥", url="https://t.me/II_CHAT_HUB_II"),
-                InlineKeyboardButton("🖥️ Updates 💻", url="https://t.me/ll_THE_BAD_BOT_ll"),
+                InlineKeyboardButton("💥 sᴜᴘᴘᴏʀᴛ ᴠ𝟸 💥", url="https://t.me/LOGS_GC"),
+                InlineKeyboardButton("🖥️ ᴜᴘᴅᴀᴛᴇs 💻", url="https://t.me/FINE_N_OK"),
             ],
             
             [
@@ -270,7 +270,7 @@ async def help_close_cb(_, cb: CallbackQuery):
             "__» Anyone pretending to be the developer of this bot and selling the code, is a scammer.__\n\n"
             "__» Please consider giving a star to the repository if you liked the project.__\n"
             "__» Feel free to contact us if you need any help regarding the source code.__\n\n"
-            "**❤️ @ll_THE_BAD_BOT_ll ❤️**",
+            "**❤️ @MY_LOGS_GC ❤️**",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
