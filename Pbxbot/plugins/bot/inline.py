@@ -26,12 +26,12 @@ async def help_inline(_, query: InlineQuery):
         results=[
             (
                 InlineQueryResultArticle(
-                    "Pbxbot 2.0 Help Menu 👻",
+                    "New Module Help Menu 🇮🇳",
                     InputTextMessageContent(
                         caption,
                         disable_web_page_preview=True,
                     ),
-                    description="Inline Query for Help Menu of PbxBot",
+                    description="Inline Query for Help Menu of New Module",
                     reply_markup=InlineKeyboardMarkup(buttons),
                 )
             )
