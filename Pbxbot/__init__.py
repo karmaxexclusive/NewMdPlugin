@@ -11,7 +11,7 @@ START_TIME = time.time()
 
 
 __version__ = {
-    "Pbxbot": "3.0",
+    "New Module": "3.0",
     "pyrogram": pyrogram_version,
     "python": python_version(),
 }
