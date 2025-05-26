@@ -104,9 +104,9 @@ def start_button() -> list[list[InlineKeyboardButton]]:
             InlineKeyboardButton("🗡️ sᴏᴜʀᴄᴇ 🗡️", "help_data:source"),
             ],
         [
-            InlineKeyboardButton("📌 DEPLOY 📌", url="https://t.me/PBX_NETWORK/6"),
+            InlineKeyboardButton("📌 DEPLOY 📌", url="https://t.me/Fumkies"),
         ],
         [
-        InlineKeyboardButton("🕊️⃝‌ᴘʙx ❤️ᥫ᭡፝֟፝֟" ,  url="https://t.me/ll_THE_BAD_BOT_ll"),
+        InlineKeyboardButton("All BOT SUPPORT" ,  url="https://t.me/MY_LOGS_GC"),
     ]
     ]
