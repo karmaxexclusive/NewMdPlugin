@@ -1,6 +1,6 @@
-# PbxBot v3 Plugins
+# New Module v3 Plugins
 
-# Follow this format to make your own plugin for PbxBot.
+# Follow this format to make your own plugin for New Module.
 
 ```python3
 """
