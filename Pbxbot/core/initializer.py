@@ -1,4 +1,5 @@
 import sys
+from types import ModuleType
 from .clients import Pbxbot
 from .config import Config, Symbols
 from .database import db
@@ -6,52 +7,39 @@ from .logger import LOGS
 
 
 async def _AuthUsers() -> None:
-    temp_list = []
-    temp_list.append(Config.OWNER_ID)
-    temp_list.extend([(await client.get_me()).id for client in Pbxbot.users])
+    """Authorize Owner, all bot clients, and stan users."""
+    users = {Config.OWNER_ID}
+    users.update([(await client.get_me()).id for client in Pbxbot.users])
 
     stan_users = await db.get_all_stans()
-    for user in stan_users:
-        temp_list.append(user["user_id"])
+    users.update(user["user_id"] for user in stan_users)
 
-    users = list(set(temp_list))
-    for user in users:
-        Config.AUTH_USERS.add(user)
+    Config.AUTH_USERS.update(users)
 
-    temp_list = None
-    LOGS.info(
-        f"{Symbols.arrow_right * 2} Added Authorized Users {Symbols.arrow_left * 2}"
-    )
+    LOGS.info(f"{Symbols.arrow_right * 2} Added Authorized Users {Symbols.arrow_left * 2}")
 
 
 async def _StanUsers() -> None:
+    """Add stan users to config."""
     users = await db.get_all_stans()
-    for user in users:
-        Config.STAN_USERS.add(user["user_id"])
+    Config.STAN_USERS.update(user["user_id"] for user in users)
 
     LOGS.info(f"{Symbols.arrow_right * 2} Added Stan Users {Symbols.arrow_left * 2}")
 
 
 async def _GbanUsers() -> None:
-    users = await db.get_gban()
-    for user in users:
-        Config.BANNED_USERS.add(user["user_id"])
+    """Add global ban and mute users to config."""
+    banned = await db.get_gban()
+    Config.BANNED_USERS.update(user["user_id"] for user in banned)
+    LOGS.info(f"{Symbols.arrow_right * 2} Added {len(banned)} Gbanned Users {Symbols.arrow_left * 2}")
 
-    LOGS.info(
-        f"{Symbols.arrow_right * 2} Added {len(users)} Gbanned Users {Symbols.arrow_left * 2}"
-    )
-
-    musers = await db.get_gmute()
-    for user in musers:
-        Config.MUTED_USERS.add(user["user_id"])
-
-    LOGS.info(
-        f"{Symbols.arrow_right * 2} Added {len(musers)} Gmuted Users {Symbols.arrow_left * 2}"
-    )
+    muted = await db.get_gmute()
+    Config.MUTED_USERS.update(user["user_id"] for user in muted)
+    LOGS.info(f"{Symbols.arrow_right * 2} Added {len(muted)} Gmuted Users {Symbols.arrow_left * 2}")
 
 
 async def UserSetup() -> None:
-    """Initialize Users Config"""
+    """Initialize all user-related config values."""
     LOGS.info(f"{Symbols.bullet * 3} Setting Up Users {Symbols.bullet * 3}")
     await _AuthUsers()
     await _StanUsers()
@@ -59,36 +47,35 @@ async def UserSetup() -> None:
 
 
 async def ForcesubSetup() -> None:
-    """Initialize Forcesub Config"""
+    """Initialize force subscription chats."""
     chats = await db.get_all_forcesubs()
-    for chat in chats:
-        if chat not in Config.FORCESUBS:
-            Config.FORCESUBS.add(chat["chat"])
+    Config.FORCESUBS.update(chat["chat"] for chat in chats)
 
 
 async def GachaBotsSetup() -> None:
-    """Initialize GachaBots Config"""
+    """Initialize registered GachaBot IDs."""
     bots = await db.get_all_gachabots_id()
-    for bot in bots:
-        Config.GACHA_BOTS.add(bot)
+    Config.GACHA_BOTS.update(bots)
 
 
 async def TemplateSetup() -> None:
-    """Initialize Templates Config"""
+    """Load uppercase template constants from template file into config."""
     module_name = "temp_module"
-    module = sys.modules.get(module_name)
-    if module is None:
-        module = type(sys)(module_name)
+    module: ModuleType = sys.modules.get(module_name) or type(sys)(module_name)
 
-    with open("Pbxbot/functions/templates.py", "r", encoding="utf-8") as file:
-        exec(file.read(), module.__dict__)
+    try:
+        with open("Pbxbot/functions/templates.py", "r", encoding="utf-8") as file:
+            exec(file.read(), module.__dict__)
+    except FileNotFoundError:
+        LOGS.error("Template file not found: Pbxbot/functions/templates.py")
+        return
+    except Exception as e:
+        LOGS.error(f"Failed to load templates: {e}")
+        return
 
     global_vars = module.__dict__
-
-    var_n_value: dict[str, str] = {
-        var_name: global_vars[var_name][0]
-        for var_name in global_vars
-        if var_name.isupper() and not callable(global_vars[var_name])
+    Config.TEMPLATES = {
+        var: global_vars[var][0]
+        for var in global_vars
+        if var.isupper() and not callable(global_vars[var]) and isinstance(global_vars[var], (list, tuple))
     }
-
-    Config.TEMPLATES = var_n_value
